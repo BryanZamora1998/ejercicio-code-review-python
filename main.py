@@ -1,17 +1,21 @@
 # This is a sample Python script.
-
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 from calculadora import calculadora
+from distancia import distancia
+from gasolinera import gasolinera
 from numerosPrimos import numerosPrimo
-
+from promedio import promedio
+from rectangulo import rectangulo
 
 def menu():
-    print("Que transaccion desea realizar:")
-    print("1. Calculadora")
-    print("2. Numeros Primos")
-    valor1 = int(input("valor:"))
-    return valor1
+    print("QUE TRANSACCION DESEA REALIZAR:")
+    print("1. CALCULADORA")
+    print("2. NUMEROS PRIMOS")
+    print("3. DISTANCIA ENTRE 2 PUNTOS A y B, en 2D.")
+    print("4. PROMEDIO DE DOS NÚMEROS.")
+    print("5. CALCULAR PERÍMETRO Y SUPERFICIE DEL RECTÁNGULO")
+    print("6. GASOLINERA")
+    valor = int(input("VALOR:"))
+    return valor
 
 def principal():
     valor=menu()
@@ -20,7 +24,13 @@ def principal():
         calculadora()
     if valor == 2:
         numerosPrimo()
+    if valor == 3:
+        distancia()
+    if valor == 4:
+        promedio()
+    if valor==5:
+        rectangulo()
+    if valor==6:
+        gasolinera()
 
 principal()
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
